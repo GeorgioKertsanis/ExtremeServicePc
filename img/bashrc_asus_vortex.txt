@@ -1,0 +1,278 @@
+# --- VORTEX V21.42: CLEAN STATUS & BE92U READY ---
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+clear
+echo -e "${GREEN}####################################################${NC}"
+echo -e "${GREEN}#    WELCOME DEVELOPMENT GEORGIO KERTSANIS         #${NC}"
+echo -e "${GREEN}#             WELCOME BOSS HACKER                  #${NC}"
+echo -e "${GREEN}####################################################${NC}"
+echo -e "${BLUE}SYSTEM: ASUS 6 | ROUTER: ASUS BE92U PREP | Wi-Fi 7+${NC}"
+echo -e "${NC}----------------------------------------------------${NC}"
+echo -e "${YELLOW}go      ${NC}: 🤖 BOT MENU (CUBIC/RENO SELECTOR)"
+echo -e "${YELLOW}macro   ${NC}: ⚡ FULL POWER SETUP (CUBIC)"
+echo -e "${YELLOW}geodns  ${NC}: 🌀 USA STABILITY (7-PKT)"
+echo -e "${YELLOW}war     ${NC}: 🔥 5G WAR MODE (LOW BYTES)"
+echo -e "${YELLOW}race    ${NC}: 🎯 SHOOT RACE (ECN)"
+echo -e "${YELLOW}5g      ${NC}: 🏀 VICTORY MODE (B3+B7)"
+echo -e "${YELLOW}fast    ${NC}: 🚀 FAST PACKET FLOW"
+echo -e "${YELLOW}on      ${NC}: 🛡️  TITANIUM SHIELD"
+echo -e "${YELLOW}vc      ${NC}: 🔍 VIEW KERNEL CONFIG"
+echo -e "${YELLOW}backup  ${NC}: 📂 SAVE BASHRC CONFIG"
+echo -e "${YELLOW}clean   ${NC}: 🧹 SYSTEM DEEP PURGE"
+echo -e "${YELLOW}off     ${NC}: 💍 RESET TO STOCK (RENO)"
+echo -e "${YELLOW}weapon  ${NC}: 🚀 ULTIMATE BOOST & STATUS"
+echo -e "${YELLOW}adon    ${NC}: 🧪 ADGUARD IP ON"
+echo -e "${YELLOW}adoff   ${NC}: 🔒 ADGUARD IP OFF"
+echo -e "${YELLOW}dual    ${NC}: 👯 DUAL MATCHING SYNC"
+echo -e "${YELLOW}s47     ${NC}: 🔗 DUAL SYNC 384 (POCO V47)"
+echo -e "${YELLOW}ice     ${NC}: 🧊 GLITCH FIXER (VORTEX)"
+echo -e "${YELLOW}unice   ${NC}: ♻️  REFRESH SYSTEM"
+echo -e "${YELLOW}slow    ${NC}: 📉 GLOBAL SMOOTH MODE"
+echo -e "${YELLOW}slowoff ${NC}: ⚡ SPEED RESTORE"
+echo -e "${YELLOW}status  ${NC}: 📊 Check System (CPU/GPU/NET)"
+echo -e "${RED}max     ${NC}: 🔥 Unleash Overclock Mode"
+echo -e "${NC}----------------------------------------------------${NC}"
+
+# --- ⚙️ CORE SHORTCUTS ---
+alias n='nano .bashrc'
+alias s='source .bashrc'
+alias go='bot_menu'
+alias backup='cp ~/.bashrc ~/.bashrc.bak && cp ~/.bashrc /sdcard/Download/termux_backups/bashrc_asus_vortex.txt && echo -e "${GREEN}✅ INTERNAL & SD BACKUP DONE!${NC}"'
+
+# --- 🚀 PERFORMANCE PROFILES ---
+function set_cubic {
+    su -c "sysctl -w net.ipv4.tcp_congestion_control=cubic" 2>/dev/null
+    su -c "sysctl -w net.core.rmem_max=16777216; sysctl -w net.core.wmem_max=16777216" 2>/dev/null
+    su -c "sysctl -w net.ipv4.tcp_rmem='4096 87380 16777216'; sysctl -w net.ipv4.tcp_wmem='4096 87380 16777216'" 2>/dev/null
+    su -c "sysctl -w net.ipv4.tcp_limit_output_bytes=262144; sysctl -w net.ipv4.tcp_low_latency=0" 2>/dev/null
+    echo -e "${CYAN}🚀 CUBIC PROFILE ACTIVE (MAX THROUGHPUT)!${NC}"
+}
+
+function set_reno {
+    su -c "sysctl -w net.ipv4.tcp_congestion_control=reno" 2>/dev/null
+    su -c "sysctl -w net.core.rmem_max=16777216; sysctl -w net.core.wmem_max=16777216" 2>/dev/null
+    su -c "sysctl -w net.ipv4.tcp_limit_output_bytes=494592; sysctl -w net.ipv4.tcp_low_latency=1" 2>/dev/null
+    echo -e "${GREEN}🚀 RENO PROFILE ACTIVE (STABLE FLOW)!${NC}"
+}
+
+# --- 🤖 THE BOT MENU (GO) ---
+function bot_menu {
+    echo -e "${MAGENTA}╔════════════════════════════════════════════╗${NC}"
+    echo -e "${MAGENTA}║         VORTEX BOT GLITCH MENU             ║${NC}"
+    echo -e "${MAGENTA}╠════════════════════════════════════════════╣${NC}"
+    echo -e "${CYAN}  1) CUBIC MODE (BE92U / Speed Peak)          ${NC}"
+    echo -e "${CYAN}  2) RENO MODE  (Distance Stability)          ${NC}"
+    echo -e "${CYAN}  3) RESET TO STOCK (Reno Default)            ${NC}"
+    echo -e "${MAGENTA}╚════════════════════════════════════════════╝${NC}"
+    read -p "Select Mode (1-3): " choice
+    case $choice in
+        1) set_cubic; geodns; on ;;
+        2) set_reno; geodns; on ;;
+        3) stock_reset ;;
+        *) echo -e "${RED}Invalid Option!${NC}" ;;
+    esac
+}
+
+# --- 🛡️ UTILITIES ---
+alias adon='su -c "content insert --uri content://settings/global --bind name:s:private_dns_mode --bind value:s:hostname" 2>/dev/null; su -c "content insert --uri content://settings/global --bind name:s:private_dns_specifier --bind value:s:dns.adguard.com" 2>/dev/null; echo -e "${GREEN}🧪 ADGUARD ON${NC}"'
+alias adoff='su -c "content insert --uri content://settings/global --bind name:s:private_dns_mode --bind value:s:off" 2>/dev/null; echo -e "${RED}🔒 ADGUARD OFF${NC}"'
+
+# --- 🧹 CLEAN & VORTEX STATUS (FIXED) ---
+function clean_all {
+    clear
+    echo -e "${YELLOW}CLEANING RAM & KERNEL...${NC}"
+    # Μόνο Linux εντολές για να μην κολλάει στο Asus 6
+    su -c "sync; echo 3 > /proc/sys/vm/drop_caches" &>/dev/null
+    sleep 1
+    cong=$(su -c "sysctl -n net.ipv4.tcp_congestion_control" 2>/dev/null)
+    lim=$(su -c "sysctl -n net.ipv4.tcp_limit_output_bytes" 2>/dev/null)
+    echo -e "${MAGENTA}--- VORTEX KERNEL STATUS ---${NC}"
+    echo -e "${CYAN}Algorithm :${NC} $cong"
+    echo -e "${CYAN}TCP Limit :${NC} $((lim / 1024))KB"
+    echo -e "${MAGENTA}----------------------------${NC}"
+    echo -e "${GREEN}ASUS 6 CLEANED! 🏀${NC}"
+}
+alias clean='clean_all'
+alias vc='clean_all'
+
+# --- 🌐 NETWORK TWEAKS ---
+alias geodns='su -c "sysctl -w net.ipv4.tcp_adv_win_scale=1" 2>/dev/null; echo -e "${CYAN}🌀 USA STABILITY ON${NC}"'
+alias war='su -c "sysctl -w net.ipv4.tcp_limit_output_bytes=8192" 2>/dev/null; echo -e "${RED}🔥 5G WAR MODE ON${NC}"'
+alias race='su -c "sysctl -w net.ipv4.tcp_ecn=1" 2>/dev/null; echo -e "${RED}🎯 SHOOT RACE ACTIVE${NC}"'
+alias 5g='su -c "sysctl -w net.core.rmem_max=8388608" 2>/dev/null; echo -e "${GREEN}🏀 VICTORY MODE ON${NC}"'
+alias fast='su -c "sysctl -w net.ipv4.tcp_timestamps=1" 2>/dev/null; echo -e "${CYAN}🚀 FAST PACKET FLOW${NC}"'
+alias on='su -c "sysctl -w net.ipv4.tcp_fastopen=3" 2>/dev/null; echo -e "${GREEN}🛡️  TITANIUM SHIELD ON${NC}"'
+
+# --- 🔄 RESET & STATUS ---
+function stock_reset {
+    clear
+    echo -e "${CYAN}RESTORING EVERYTHING TO STOCK...${NC}"
+    # 1. Επαναφορά Δικτύου
+    su -c "sysctl -w net.ipv4.tcp_congestion_control=reno" 2>/dev/null
+    su -c "sysctl -w net.core.rmem_max=2097152" 2>/dev/null
+    su -c "ifconfig wlan0 mtu 1500"
+    # 2. Ξεπάγωμα Thermal & WiFi
+    su -c "pm unsuspend com.asus.thermal" &>/dev/null
+    su -c "settings put global wifi_scan_always_enabled 1" &>/dev/null
+    su -c "settings put global wifi_sleep_policy 1" &>/dev/null
+    # 3. Ξεπάγωμα Apps & Google Services
+    su -c "pm unsuspend com.facebook.katana" &>/dev/null
+    su -c "pm unsuspend com.instagram.android" &>/dev/null
+    su -c "pm unsuspend com.facebook.orca" &>/dev/null
+    su -c "pm unsuspend com.tiktok.android" &>/dev/null
+    su -c "pm unsuspend com.google.android.gms" &>/dev/null
+    su -c "pm unsuspend com.android.vending" &>/dev/null
+    # 4. Καθαρισμός RAM
+    su -c "sync; echo 1 > /proc/sys/vm/drop_caches" &>/dev/null
+    echo -e "${GREEN}🔄 STOCK RESET DONE! APPS & WIFI RESTORED.${NC}"
+}
+alias off='stock_reset'
+
+# --- ⚡ THE POWER MACRO (CUBIC) ---
+alias macro='set_cubic; geodns; on; echo -e "${MAGENTA}⚡ VORTEX FULL POWER READY!${NC}"'
+
+PS1='\[\e[1;32m\]Georgios-Asus\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+
+alias weapon='su -c "sm fstrim && sysctl -w net.ipv4.tcp_low_latency=1 && sysctl -w net.core.rmem_max=16777216 && sysctl -w net.core.wmem_max=16777216 && free -h && dumpsys battery | grep -E \"level|status|health|temp\" && ping -c 5 8.8.8.8"'
+
+alias dual='su -c "sysctl -w net.ipv4.tcp_base_mss=400; sysctl -w net.ipv4.tcp_congestion_control=cubic; echo \"🗽 US MSS 400 LOCKED\"" && echo "🏀 DUAL MATCHING READY!"'
+
+alias sc='echo -e "\nREADY FOR MATCHING?"; sleep 1; echo "3..."; sleep 1; echo "2..."; sleep 1; echo "1..."; sleep 1; echo -e "\n🚀 PATA TORA!!!\n"'
+
+alias geo='echo -e "\n🇪🇺 EUROPE"; ping -c 3 1.1.1.1 | grep "avg"; echo -e "\n🗽 US QWEST"; ping -c 3 205.171.3.65 | grep "avg"'
+
+alias s47='clear; echo -e "${RED}BOOSTING ASUS 6 NETWORK...${NC}"; su -c "sysctl -w net.ipv4.tcp_low_latency=1; sysctl -w net.ipv4.tcp_fastopen=3; sysctl -w net.ipv4.tcp_timestamps=0; su -c \"sysctl -w net.ipv4.tcp_congestion_control=reno\""; echo -e "${GREEN}SYSTEM READY! 🏀${NC}"'
+
+alias perfon='su -c "for i in 0 1 2 3 4 5 6 7; do echo performance > /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_governor; done"; echo -e "${CYAN}🚀 ROG CPU AT MAX!${NC}"'
+
+# --- ❄️ ASUS 6 ICE MODE (No WiFi Reset) ---
+alias ice='clear; \
+echo -e "\e[31mACTIVATING BATTLE MODE...\e[0m"; \
+(su -c "pkill -f com.facebook.katana; pkill -f com.instagram.android; pkill -f com.facebook.orca; pkill -f com.tiktok.android; pkill -f com.asus.focusonapp; pkill -f com.asus.config" &>/dev/null) & \
+su -c "pm suspend com.asus.thermal" &>/dev/null; \
+su -c "pm suspend com.google.android.gms" &>/dev/null; \
+su -c "pm suspend com.android.vending" &>/dev/null; \
+su -c "sync; echo 3 > /proc/sys/vm/drop_caches" &>/dev/null; \
+sleep 1; \
+clear; \
+echo -e "\e[32mASUS 6 OPTIMIZED! 🏀${NC}"; \
+echo -e "\e[34mREADY FOR MATCHMAKING${NC}"'
+
+# --- UNICE: REFRESH MENU ---
+alias unice='clear; \
+echo -e "${GREEN}####################################################${NC}"
+echo -e "${GREEN}#    WELCOME DEVELOPMENT GEORGIO KERTSANIS         #${NC}"
+echo -e "${GREEN}#             WELCOME BOSS HACKER                  #${NC}"
+echo -e "${GREEN}####################################################${NC}"
+echo -e "${BLUE}SYSTEM: ASUS 6 | ROUTER: ASUS BE92U PREP | Wi-Fi 7+${NC}"
+echo -e "${NC}----------------------------------------------------${NC}"
+echo -e "${YELLOW}go      ${NC}: 🤖 BOT MENU (CUBIC/RENO SELECTOR)"
+echo -e "${YELLOW}macro   ${NC}: ⚡ FULL POWER SETUP (CUBIC)"
+echo -e "${YELLOW}geodns  ${NC}: 🌀 USA STABILITY (7-PKT)"
+echo -e "${YELLOW}war     ${NC}: 🔥 5G WAR MODE (LOW BYTES)"
+echo -e "${YELLOW}race    ${NC}: 🎯 SHOOT RACE (ECN)"
+echo -e "${YELLOW}5g      ${NC}: 🏀 VICTORY MODE (B3+B7)"
+echo -e "${YELLOW}fast    ${NC}: 🚀 FAST PACKET FLOW"
+echo -e "${YELLOW}on      ${NC}: 🛡️  TITANIUM SHIELD"
+echo -e "${YELLOW}vc      ${NC}: 🔍 VIEW KERNEL CONFIG"
+echo -e "${YELLOW}backup  ${NC}: 📂 SAVE BASHRC CONFIG"
+echo -e "${YELLOW}clean   ${NC}: 🧹 SYSTEM DEEP PURGE"
+echo -e "${YELLOW}off     ${NC}: 💍 RESET TO STOCK (RENO)"
+echo -e "${YELLOW}weapon  ${NC}: 🚀 ULTIMATE BOOST & STATUS"
+echo -e "${YELLOW}adon    ${NC}: 🧪 ADGUARD IP ON"
+echo -e "${YELLOW}adoff   ${NC}: 🔒 ADGUARD IP OFF"
+echo -e "${YELLOW}dual    ${NC}: 👯 DUAL MATCHING SYNC"
+echo -e "${YELLOW}s47     ${NC}: 🔗 DUAL SYNC 384 (POCO V47)"
+echo -e "${YELLOW}ice     ${NC}: 🧊 GLITCH FIXER (VORTEX)"
+echo -e "${YELLOW}unice   ${NC}: ♻️  REFRESH SYSTEM"
+echo -e "${YELLOW}slow    ${NC}: 📉 GLOBAL SMOOTH MODE"
+echo -e "${YELLOW}slowoff ${NC}: ⚡ SPEED RESTORE"
+echo -e "${YELLOW}status  ${NC}: 📊 Check System (CPU/GPU/NET)"
+echo -e "${RED}max     ${NC}: 🔥 Unleash Overclock Mode"
+echo -e "${NC}----------------------------------------------------${NC}"'
+
+alias slow='su -c "echo 806400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq; echo 220000000 > /sys/class/kgsl/kgsl-3d0/max_gpuclk" && echo -e "${GREEN}📉 HARDWARE CHOKED!${NC}"'
+
+alias slowoff='su -c "echo 2016000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq" && echo -e "\033[0;32m❄️ SYSTEM RESTORED TO 2.0GHz\033[0m" && status'
+
+alias status='CPU=$(su -c "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq") && GPU=$(su -c "cat /sys/class/kgsl/kgsl-3d0/max_gpuclk") && echo -e " | 🚀 CPU Max:  $(expr $CPU / 1000).0 MHz |" && echo -e " | 🎮 GPU Max:  $(expr $GPU / 1000000) MHz    |" && su -c "sysctl net.ipv4.tcp_congestion_control"'
+
+alias max='su -c "echo 3187200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq; echo 910000000 > /sys/class/kgsl/kgsl-3d0/max_gpuclk" && echo -e "${RED}🔥 ALL CORES MAXED!${NC}"'
+
+alias mt='clear; echo -e "${RED}PREPARING...${NC}"; sleep 0.8; echo -e "${GREEN}🏀 MT NOW! 🏀${NC}"'
+
+alias p='echo -e "\033[0;33m📡 Checking Ping to Cloudflare  DNS...\033[0m" && ping -c 10 1.1.1.1'
+
+alias sync='su -c "sysctl -w net.ipv4.tcp_congestion_control=reno && sysctl -w net.ipv4.ip_default_ttl=64 && sysctl -w net.core.rmem_max=2097152 && sysctl -w net.core.wmem_max=2097152 && sysctl -w net.ipv4.tcp_rmem=\"4096 87380 2097152\" && sysctl -w net.ipv4.tcp_wmem=\"4096 65536 2097152\"" && echo -e "\033[0;32m✅ SYNC COMPLETE! Devices are now Twins.\033[0m"'
+
+alias go1='su -c "ifconfig wlan0 mtu 1472 && sysctl -w net.ipv4.tcp_congestion_control=reno && sysctl -w net.ipv4.ip_default_ttl=64 && sysctl -w net.core.rmem_max=2097152 && sysctl -w net.core.wmem_max=2097152 && sysctl -w net.ipv4.tcp_rmem=\"4096 87380 2097152\" && sysctl -w net.ipv4.tcp_wmem=\"4096 65536 2097152\"" && echo -e "\033[0;32m🚀 TWINS SYNCED @ 1472 MTU!\033[0m" && status'
+
+health() {
+    echo -e "\033[1;34m🔍 Checking US Qwest Route (205.171.3.65)...\033[0m"
+    
+    # Επιβεβαίωση τοποθεσίας μέσω της διαδρομής του Director
+    echo -n "📍 Location Check: "
+    curl -s https://ipinfo.io/country
+    
+    echo -n "⚡ Προθερμαίνω τη διαδρομή προς Αμερική... "
+    
+    # Ping απευθείας στον Qwest DNS που έχεις στο Merlin
+    min_ping=$(ping -c 10 205.171.3.65 | tail -1 | awk -F '=' '{print $2}' | awk -F '/' '{print $1}' | cut -d '.' -f 1 | tr -d ' ')
+
+    if [ -z "$min_ping" ]; then
+        echo -e "\n\e[31m❌ Σφάλμα: Ο Qwest DNS δεν απαντάει!\e[0m"
+        return
+    fi
+
+    # Νέα όρια για ΠΡΑΓΜΑΤΙΚΟ US Routing
+    # (Εδώ το ping θα είναι φυσιολογικά υψηλότερο, π.χ. 120-160ms)
+    if [ "$min_ping" -lt 180 ]; then
+        echo -e "\n\e[32m✅ ΤΕΛΕΙΑ! US Ping: ${min_ping}ms. Είσαι "μέσα" στην Αμερική!\e[0m"
+    else
+        echo -e "\n\e[31m⚠️ ΠΡΟΣΟΧΗ! Υψηλό Lag: ${min_ping}ms. Έλεγξε το φορτίο του router.\e[0m"
+    fi
+}
+
+# --- ATTACK SETUP V3 ---
+
+run_attack() {
+    # 1. Τρέχει το go1 (MTU/Reno)
+    go1
+    
+    # 2. Low Latency WiFi (με παράκαμψη σφαλμάτων)
+    # Χρησιμοποιούμε su -c για να "περάσει" η εντολή αθόρυβα
+    (su -c "settings put global wifi_low_latency_mode_enabled 1" &>/dev/null &)
+    (su -c "settings put global wifi_power_save_enabled 0" &>/dev/null &)
+    
+    echo -e "\n\033[1;32m✅ ATTACK MODE ARMED\033[0m"
+    echo -e "\033[1;33m🚀 Low Latency WiFi: ON\033[0m"
+    echo -e "\033[1;33m⏳ Αναμονή 2 δευτ. για συγχρονισμό...\033[0m"
+    sleep 2
+    
+    # 3. Check Ping στον Qwest USA
+    health
+}
+
+# Το alias σου
+alias at='run_attack'
+
+alias pp='echo -e "\e[1;33m🐌 Checking US Flex (Bot Mode)...\e[0m" && ping -c 10 216.238.98.60 | tee ping_res.txt && avg_p=$(tail -1 ping_res.txt | awk -F "/" "{print \$5}" | cut -d. -f1) && if [ "$avg_p" -lt 280 ]; then echo -e "\n\e[32m✅ ΣΤΑΘΕΡΟ: $avg_p ms - ΕΙΜΑΣΤΕ ΟΚ! 🏀💰\e[0m"; else echo -e "\n\e[31m⚠️ ΠΡΟΣΟΧΗ: $avg_p ms - ΥΨΗΛΟ LAG!\e[0m"; fi'
+
+alias ppm='echo -e "\e[1;32m🇲🇽 Checking Mexico Route (Bot/Lag Mode)...\e[0m" && ping -c 10 200.33.3.123 | tee ping_mex.txt && avg_p=$(tail -1 ping_mex.txt | awk -F "/" "{print \$5}" | cut -d. -f1) && if [ "$avg_p" -lt 250 ]; then echo -e "\n\e[32m✅ ΣΤΑΘΕΡΟ: $avg_p ms - ΕΙΜΑΣΤΕ ΟΚ! 🏀💰\e[0m"; else echo -e "\n\e[31m⚠️ ΠΡΟΣΟΧΗ: $avg_p ms - ΠΟΛΥ LAG!\e[0m"; fi'
+
+# 🚀 VORTEX: Για Gaming / Matching στην Αμερική (125ms)
+alias vortex='su -c "ip link set dev wlan0 mtu 1372 && sysctl -w net.ipv4.tcp_congestion_control=reno && sysctl -w net.ipv4.tcp_base_mss=1024 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv4.tcp_low_latency=1 && sysctl -w net.ipv4.tcp_sack=1 && sysctl -w net.ipv4.tcp_timestamps=1"'
+
+# ❄️ OFF: Για Speedtest / Downloads (1000Mbps)
+alias off='su -c "ip link set dev wlan0 mtu 1500 && sysctl -w net.ipv4.tcp_congestion_control=cubic && sysctl -w net.ipv4.tcp_adv_win_scale=2 && sysctl -w net.core.rmem_max=16777216 && sysctl -w net.core.wmem_max=16777216" && echo -e "❄️ VORTEX OFF: 1000MBPS RESTORED"'
+
+# 🗽 GEO: Το τεστ σταθερότητας
+alias geo='echo -e "\n🗽 CHECKING US QWEST..."; ping -i 0.2 -s 40 -c 20 205.171.3.65'
+
+
