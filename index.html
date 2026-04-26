@@ -35,7 +35,7 @@
             line-height: 1.6;
             scroll-behavior: smooth;
             overflow-x: hidden;
-            font-size: 15px; /* Compact base font size */
+            font-size: 15px; 
         }
 
         ::-webkit-scrollbar { width: 10px; }
@@ -49,7 +49,7 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
-            padding: 10px 0; /* Compact padding */
+            padding: 10px 0; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,7 +57,7 @@
             border-bottom: 1px solid var(--glass-border);
         }
 
-        .navbar-links { display: flex; gap: 20px; } /* Compact gap */
+        .navbar-links { display: flex; gap: 20px; } 
         .nav-item {
             color: white;
             text-decoration: none;
@@ -84,11 +84,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 100px 15px 40px; /* Compact padding */
+            padding: 100px 15px 40px; 
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem); /* Slightly more compact */
+            font-size: clamp(2.5rem, 8vw, 4.5rem); 
             font-weight: 900;
             background: linear-gradient(to right, #ffffff, var(--blue));
             -webkit-background-clip: text;
@@ -98,17 +98,16 @@
             line-height: 0.9;
             margin-bottom: 20px;
         }
-        .hero p { font-size: 1rem; max-width: 650px; color: var(--gray-text); margin-bottom: 30px; font-weight: 300; } /* Compacted text */
+        .hero p { font-size: 1rem; max-width: 650px; color: var(--gray-text); margin-bottom: 30px; font-weight: 300; } 
 
         .brands-bar { width: 100%; background: #0a0a0a; padding: 15px 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); overflow: hidden; position: relative; }
-        .brands-track { display: flex; width: calc(180px * 20); animation: scroll 30s linear infinite; } /* Faster scroll */
+        .brands-track { display: flex; width: calc(180px * 20); animation: scroll 30s linear infinite; } 
         .brand-name { width: 180px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1rem; color: rgba(255, 255, 255, 0.15); text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; cursor: default; }
         .brand-name:hover { color: var(--blue); }
 
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 10)); } }
 
-        /* Buttons Grid */
-        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 800px;} /* Compact gap */
+        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 800px;} 
         .btn { padding: 12px 18px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.4s ease; text-transform: uppercase; font-size: 0.7rem; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); color: white; }
 
         .btn-blue { background: var(--blue); }
@@ -116,16 +115,16 @@
         .btn-viber { background: var(--viber); }
         .btn-messenger { background: var(--messenger); }
         .btn-whatsapp { background: var(--whatsapp-green); }
-        .btn-outline { border: 1px solid white; background: transparent; } /* Thinner border */
+        .btn-outline { border: 1px solid white; background: transparent; } 
 
         .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
 
-        .container { max-width: 1100px; margin: auto; padding: 60px 15px; } /* Compact padding */
+        .container { max-width: 1100px; margin: auto; padding: 60px 15px; } 
         .section-title { text-align: center; font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
         .section-title span { color: var(--blue); position: relative; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; } /* Compacted */
-        .s-card { background: var(--card-bg); padding: 30px 25px; border-radius: 18px; border: 1px solid var(--glass-border); transition: 0.4s; backdrop-filter: blur(5px); display: flex; flex-direction: column; align-items: center; text-align: center;} /* Compacted and Centered */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; } 
+        .s-card { background: var(--card-bg); padding: 30px 25px; border-radius: 18px; border: 1px solid var(--glass-border); transition: 0.4s; backdrop-filter: blur(5px); display: flex; flex-direction: column; align-items: center; text-align: center;} 
         .s-card:hover { transform: translateY(-8px); border-color: var(--blue); }
         .s-card i { font-size: 2.5rem; background: linear-gradient(45deg, var(--blue), #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; display: inline-block; }
         .s-card h3 { font-family: Montserrat, sans-serif; font-size: 1.1rem; margin-bottom: 8px;}
@@ -134,7 +133,7 @@
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px; }
         .g-img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; transition: 0.3s; border: 1px solid var(--glass-border); margin-bottom: 15px;}
         
-        .gallery-link { padding: 10px 15px; font-size: 0.65rem; width: 100%; justify-content: center; } /* Compact gallery button */
+        .gallery-link { padding: 10px 15px; font-size: 0.65rem; width: 100%; justify-content: center; } 
 
         .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .review-item { background: var(--card-bg); padding: 25px; border-radius: 15px; border-left: 3px solid var(--blue); transition: 0.3s; font-weight: 300;}
@@ -218,25 +217,25 @@
         <h2 class="section-title">Το <span>Εργαστήριο</span> μας</h2>
         <div class="gallery">
             <div class="s-card" style="padding: 15px;">
-                <img onerror="this.parentElement.style.display='none'" src="img/mobiles/1.webp" alt="Service Κινητών" class="g-img">
+                <img onerror="this.src='https://via.placeholder.com/400x220/111111/0084ff?text=Service'" src="img/mobiles/1.webp" alt="Service Κινητών" class="g-img">
                 <h3 style="font-size: 1rem; margin-bottom: 10px;">Service Κινητών</h3>
                 <a href="iphone-repair.html" class="btn btn-blue gallery-link">ΔΕΣ ΤΗ GALLERY</a>
             </div>
 
             <div class="s-card" style="padding: 15px;">
-                <img onerror="this.parentElement.style.display='none'" src="img/laptops/1.webp" alt="Service Laptop" class="g-img">
+                <img onerror="this.src='https://via.placeholder.com/400x220/111111/0084ff?text=Service'" src="img/laptops/1.webp" alt="Service Laptop" class="g-img">
                 <h3 style="font-size: 1rem; margin-bottom: 10px;">Service Laptop & Mac</h3>
                 <a href="mac-service.html" class="btn btn-blue gallery-link">ΔΕΣ ΤΗ GALLERY</a>
             </div>
 
             <div class="s-card" style="padding: 15px;">
-                <img onerror="this.parentElement.style.display='none'" src="img/gaming/1.webp" alt="Gaming PC Builds" class="g-img">
+                <img onerror="this.src='https://via.placeholder.com/400x220/111111/0084ff?text=Service'" src="img/gaming/1.webp" alt="Gaming PC Builds" class="g-img">
                 <h3 style="font-size: 1rem; margin-bottom: 10px;">Gaming Builds</h3>
                 <a href="gaming-builds.html" class="btn btn-blue gallery-link">ΔΕΣ ΤΑ BUILDS</a>
             </div>
 
             <div class="s-card" style="padding: 15px;">
-                <img onerror="this.parentElement.style.display='none'" src="img/racks/1.webp" alt="Εγκατάσταση Δικτύων" class="g-img">
+                <img onerror="this.src='https://via.placeholder.com/400x220/111111/0084ff?text=Service'" src="img/racks/1.webp" alt="Εγκατάσταση Δικτύων" class="g-img">
                 <h3 style="font-size: 1rem; margin-bottom: 10px;">Δίκτυα</h3>
                 <a href="networks.html" class="btn btn-blue gallery-link">ΔΕΣ ΤΑ ΔΙΚΤΥΑ</a>
             </div>
@@ -267,7 +266,7 @@
     </section>
 
     <div class="map-section">
-        <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.319525419356!2d21.4087955!3d40.7818788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1357c4c360824b45%3A0x6b1db92c303102bc!2sKastrisianaki%2016%2C%20Florina%20531%2000!5e0!3m2!1sel!2sgr!4v1714596395374!5m2!1sel!2sgr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <footer>
@@ -286,7 +285,6 @@
     </footer>
 
     <script>
-        // SMART VIBER OPENER (iPhone & Android fix)
         function openViber() {
             const number = "306947985322";
             const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -297,7 +295,6 @@
             }
         }
 
-        // SMS FORM SCRIPT
         document.getElementById('smsForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
