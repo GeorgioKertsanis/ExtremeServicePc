@@ -3,27 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Κινητών - ExtremeServicePc.gr</title>
+    <title>Service Κινητών Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0b0b0b; color: #e0e0e0; font-family: sans-serif; margin: 0; text-align: center; }
-        .header { padding: 30px; background: #1a1a1a; border-bottom: 2px solid #28a745; } /* Πράσινο border για το Service */
-        .gallery { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .gallery img { width: 100%; border-radius: 10px; border: 1px solid #333; }
-        .btn { display: inline-block; margin: 20px; padding: 10px 20px; background: #28a745; color: #fff; text-decoration: none; border-radius: 5px; }
+        :root { --blue: #0084ff; --dark-bg: #050505; --card-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background: var(--dark-bg); color: white; padding: 50px 20px; text-align: center; }
+        h1 { font-family: 'Montserrat', sans-serif; margin-bottom: 40px; color: var(--blue); text-transform: uppercase; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .g-card { background: var(--card-bg); padding: 10px; border-radius: 15px; border: 1px solid var(--glass-border); }
+        .g-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; transition: 0.3s; }
+        .g-card img:hover { transform: scale(1.05); }
+        .back-btn { display: inline-block; margin-top: 50px; padding: 15px 30px; background: var(--blue); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Service iPhone & Smartphones</h1>
-        <p>Επισκευές Μητρικής, Οθόνης & Μπαταρίας</p>
-    </div>
-    <a href="index.html" class="btn">← ΕΠΙΣΤΡΟΦΗ</a>
-    <div class="gallery">
-        <img onerror="this.parentElement.style.display='none'" src="img/mobiles/1.webp">
-        <img onerror="this.parentElement.style.display='none'" src="img/mobiles/2.webp">
-        <img onerror="this.parentElement.style.display='none'" src="img/mobiles/3.webp">
-        <img onerror="this.parentElement.style.display='none'" src="img/mobiles/4.webp">
-        <img onerror="this.parentElement.style.display='none'" src="img/mobiles/5.webp">
-        </div>
-</body>
-</html>
+    <h1>Service Κινητών Gallery</h1>
+    <div class="gallery-grid">
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/1.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/2.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/3.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/4.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/5.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/6.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/7.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/8.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/9.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/10.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/11.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/12.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/13.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/14.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/15.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/16.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/17.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/18.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/19.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/20.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/21.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/22.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/23.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/24.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/25.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/26.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/27.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/28.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/29.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/30.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/31.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/32.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/33.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/34.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/35.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/36.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/37.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/38.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/39.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/40.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/41.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/42.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/43.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/44.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/45.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/46.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/47.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/48.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/49.webp" alt="Mobile Service"></div>
+        <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/50.webp" alt="Mobile Service"></div>
+    </div><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> ΕΠΙΣΤΡΟΦΗ</a></body></html>
