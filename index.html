@@ -4,66 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExtremeServicePc | Η "Εντατική" της Τεχνολογίας</title>
+    <meta name="description" content="ExtremeServicePc στη Φλώρινα. Εξειδικευμένο service laptop, pc, iPhone και Android.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue: #0084ff; --orange: #ff5e00; --viber: #7360f2; --dark-bg: #050505; --card-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1); }
+        :root { --blue: #0084ff; --orange: #ff5e00; --viber: #7360f2; --messenger: #006aff; --whatsapp: #25d366; --dark-bg: #050505; --card-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Roboto', sans-serif; background: var(--dark-bg); color: white; line-height: 1.6; scroll-behavior: smooth; }
         .navbar { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); padding: 15px; z-index: 9999; text-align: center; border-bottom: 1px solid var(--glass-border); }
         .nav-item { color: white; text-decoration: none; margin: 0 15px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px; background: linear-gradient(rgba(0,0,0,0.7), #050505), url('https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80'); background-size: cover; background-position: center; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; margin-bottom: 20px; text-transform: uppercase; color: white; line-height: 1; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 60px; background: linear-gradient(rgba(0,0,0,0.7), #050505), url('https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80'); background-size: cover; background-position: center; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(3rem, 10vw, 5rem); font-weight: 900; text-transform: uppercase; line-height: 0.9; margin-bottom: 20px; }
         .btn-group { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; max-width: 900px; margin-top: 30px; }
-        .btn { padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; color: white; display: inline-flex; align-items: center; gap: 10px; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
-        .btn-blue { background: var(--blue); } .btn-orange { background: var(--orange); } .btn-viber { background: var(--viber); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn { padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; border: none; }
+        .btn-blue { background: var(--blue); } .btn-orange { background: var(--orange); } .btn-viber { background: var(--viber); } .btn-messenger { background: var(--messenger); } .btn-whatsapp { background: var(--whatsapp); }
         .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
-        .s-card { background: var(--card-bg); padding: 25px; border-radius: 20px; border: 1px solid var(--glass-border); text-align: center; transition: 0.4s; backdrop-filter: blur(5px); }
-        .s-card:hover { transform: translateY(-10px); border-color: var(--blue); }
-        .s-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+        .s-card { background: var(--card-bg); padding: 25px; border-radius: 24px; border: 1px solid var(--glass-border); text-align: center; transition: 0.4s; backdrop-filter: blur(5px); }
+        .s-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; }
+        .form-box { background: #111; padding: 40px; border-radius: 30px; border: 1px solid var(--glass-border); max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white; border-radius: 10px; }
+        .map-section { width: 100%; height: 400px; margin-top: 60px; filter: grayscale(1) invert(0.9); }
         footer { padding: 60px 20px; background: #000; text-align: center; border-top: 1px solid var(--glass-border); }
     </style>
 </head>
-<body id="home">
-    <nav class="navbar">
-        <a href="#home" class="nav-item">Αρχική</a>
-        <a href="#gallery" class="nav-item">Εργαστήριο</a>
-    </nav>
-
-    <header class="hero">
-        <h1>Extreme Service Pc</h1>
-        <p style="color: #ccc; max-width: 600px; margin-top: 15px;">Η "Εντατική" της Τεχνολογίας στη Φλώρινα. Εξειδικευμένο service από το 2001.</p>
+<body>
+    <nav class="navbar"><a href="#home" class="nav-item">Αρχική</a><a href="#gallery" class="nav-item">Εργαστήριο</a><a href="#contact" class="nav-item">Repair</a></nav>
+    <header class="hero" id="home">
+        <h1>Extreme<br>ServicePc</h1>
+        <p style="color: #ccc; margin-top: 15px;">Η "Εντατική" της Τεχνολογίας στη Φλώρινα. Από το 2001.</p>
         <div class="btn-group">
             <a href="tel:+306947985322" class="btn btn-orange"><i class="fas fa-phone"></i> ΚΛΗΣΗ</a>
             <a href="#" onclick="openViber()" class="btn btn-viber"><i class="fab fa-viber"></i> VIBER</a>
-            <a href="https://wa.me/306947985322" target="_blank" class="btn btn-blue" style="background:#25d366;"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+            <a href="https://m.me/georgekertsanis" target="_blank" class="btn btn-messenger"><i class="fab fa-facebook-messenger"></i> MESSENGER</a>
+            <a href="https://wa.me/306947985322" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
         </div>
     </header>
-
     <section class="container" id="gallery">
-        <h2 style="text-align:center; font-family: Montserrat; font-size: 2.2rem; margin-bottom: 50px; text-transform: uppercase;">Το <span style="color:var(--blue)">Εργαστήριο</span> μας</h2>
+        <h2 style="text-align:center; font-family: Montserrat; font-size: 2.2rem; margin-bottom: 50px;">ΤΟ <span style="color:var(--blue)">ΕΡΓΑΣΤΗΡΙΟ</span> ΜΑΣ</h2>
         <div class="gallery">
-            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/1.webp"><h3>Service Κινητών</h3><a href="iphone-repair.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">GALLERY</a></div>
-            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/laptops/1.webp"><h3>Service Laptop</h3><a href="mac-service.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">GALLERY</a></div>
-            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/gaming/1.webp"><h3>Gaming Builds</h3><a href="gaming-builds.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">GALLERY</a></div>
-            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/racks/1.webp"><h3>Δίκτυα - Rack</h3><a href="networks.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">GALLERY</a></div>
+            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/mobiles/1.webp"><h3>Service Κινητών</h3><a href="iphone-repair.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">ΔΕΣ ΤΗ GALLERY</a></div>
+            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/laptops/1.webp"><h3>Service Laptop</h3><a href="mac-service.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">ΔΕΣ ΤΗ GALLERY</a></div>
+            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/gaming/1.webp"><h3>Gaming PC Builds</h3><a href="gaming-builds.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">ΔΕΣ ΤΑ BUILDS</a></div>
+            <div class="s-card"><img onerror="this.parentElement.style.display='none'" src="img/racks/1.webp"><h3>Δίκτυα - Rack</h3><a href="networks.html" class="btn btn-blue" style="width:100%; justify-content:center; margin-top:15px;">ΔΕΣ ΤΑ ΔΙΚΤΥΑ</a></div>
         </div>
     </section>
-
+    <section class="container" id="contact">
+        <div class="form-box">
+            <h2 style="text-align:center; margin-bottom:20px;">Request Repair</h2>
+            <form id="smsForm">
+                <input type="text" id="name" placeholder="Όνομα" required>
+                <input type="text" id="device" placeholder="Συσκευή" required>
+                <textarea id="issue" rows="3" placeholder="Βλάβη" required></textarea>
+                <button type="submit" class="btn btn-blue" style="width:100%; justify-content:center; padding:18px;">ΑΠΟΣΤΟΛΗ SMS <i class="fas fa-sms"></i></button>
+            </form>
+        </div>
+    </section>
+    <div class="map-section"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.83446180352!2d21.410189!3d40.781198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ2JzUyLjMiTiAyMcKwMjQnMzYuNyJF!5e0!3m2!1sel!2sgr!4v1650000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
     <footer>
-        <p style="margin-bottom:15px;">ExtremeServicePc Florina | Kertsanis Georgios</p>
-        <div style="opacity: 0.01; font-size: 1px; color: transparent;">episkevi laptop florina service pc florina iphone repair viber sms otenet kertsanis georgios anakthisi dedomenon format</div>
-        <p style="font-size: 0.8rem; opacity: 0.5;">© 2026 All rights reserved.</p>
+        <p>ExtremeServicePc Florina | Georgios Kertsanis</p>
+        <div style="opacity: 0.01; font-size: 1px; color: transparent;">episkevi laptop florina service pc florina iphone repair viber sms kertsanis georgios</div>
     </footer>
-
     <script>
         function openViber() {
             const n = "306947985322";
             const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
             window.location.href = isiOS ? "viber://contact?number=%2B"+n : "viber://chat?number="+n;
         }
+        document.getElementById('smsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const text = "Service Request: " + document.getElementById('name').value + " - " + document.getElementById('device').value + ": " + document.getElementById('issue').value;
+            window.location.href = "sms:+306947985322?body=" + encodeURIComponent(text);
+        });
     </script>
 </body>
 </html>
