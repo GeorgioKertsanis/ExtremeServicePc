@@ -318,6 +318,28 @@
             const text = `ExtremeServicePc Request:\nΌνομα: ${name}\nΤηλ: ${phone}\nΣυσκευή: ${device}\nΒλάβη: ${issue}`;
             window.location.href = "sms:+306947985322?body=" + encodeURIComponent(text);
         });
-    </script>
+    // Απενεργοποίηση δεξιού κλικ σε όλο το site
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Απενεργοποίηση του drag & drop για τις φωτογραφίες
+  document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+  });
+	// Απενεργοποίηση επιλογής κειμένου
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Μπλοκάρισμα Control+C, Control+U και Control+S
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'C' || e.key === 'U' || e.key === 'S')) {
+      e.preventDefault();
+    }
+  });
+	</script>
 </body>
 </html>

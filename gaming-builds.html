@@ -71,4 +71,31 @@
         <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/gaming/48.webp" alt="Gaming PC"></div>
         <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/gaming/49.webp" alt="Gaming PC"></div>
         <div class="g-card"><img onerror="this.parentElement.style.display='none'" src="img/gaming/50.webp" alt="Gaming PC"></div>
-    </div><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> ΕΠΙΣΤΡΟΦΗ</a></body></html>
+    </div><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> ΕΠΙΣΤΡΟΦΗ</a>
+
+<script>
+  // Απενεργοποίηση δεξιού κλικ σε όλο το site
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Απενεργοποίηση του drag & drop για τις φωτογραφίες
+  document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+  });
+
+  // Απενεργοποίηση επιλογής κειμένου
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Μπλοκάρισμα Control+C, Control+U και Control+S
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'C' || e.key === 'U' || e.key === 'S')) {
+      e.preventDefault();
+    }
+  });
+</script>
+</body></html>
